@@ -81,10 +81,12 @@ const Homepage = () => {
               overlayClassName="modal-overlay"
               ariaHideApp={false}
               contentLabel="Request an invite">
-              <div>All done!</div>
-              <hr />
-              <div>You will be one of the first to experience Broccoli & Co. when we launch.</div>
-              <Button type="button" onClick={closeModal}>OK</Button>
+              <div className="modal-title">All done!</div>
+              <hr className="divider" />
+              <div className="space" />
+              <div className="modal-message">You will be one of the first to experience Broccoli & Co. when we launch.</div>
+              <div className="space" />
+              <Button type="button" fullLength onClick={closeModal}>OK</Button>
             </Modal>
           ) : (
             <Modal
@@ -94,15 +96,17 @@ const Homepage = () => {
               overlayClassName="modal-overlay"
               ariaHideApp={false}
               contentLabel="Request an invite">
-              <div>Request an invite</div>
-              <hr />
+              <div className="modal-title">Request an invite</div>
+              <hr className="divider" />
+              <div className="space" />
               <form onSubmit={handleSubmit}>
                 <FormInput type="text" pattern="[A-Za-z]{3,}" onChange={handleChange} placeholder="Full name" name="fullName" value={fullName} />
                 <FormInput type="email" onChange={handleChange} placeholder="Email" name="email" value={email} />
                 <FormInput type="email" onChange={handleChange} placeholder="Confirm email" name="confirmEmail" value={confirmEmail} />
-                <Button type="submit">{requestFetching ? 'Sending, please wait...': 'Send'}</Button>
+                <div className="space" />
+                <Button type="submit" fullLength isLoading={requestFetching}>{requestFetching ? 'Sending, please wait...': 'Send'}</Button>
               </form>
-              <div>{errorMessage}</div>
+              <div className="error">{errorMessage}</div>
             </Modal>
           )}
           <div className="title">A better way to enjoy every day.</div>

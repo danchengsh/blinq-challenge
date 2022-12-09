@@ -4,3 +4,13 @@
     font-size: 20px;
     background-color: transparent;
 }
+
+.long-button {
+    width: 100%;
+    padding: 10px auto;
+}
+
+.blurred {
+    color: rgba(192, 192, 192, 0.4);
+    border-color: rgba(192, 192, 192, 0.4);
+}
