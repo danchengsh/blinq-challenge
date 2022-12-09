@@ -1,12 +1,20 @@
+import { useState } from 'react';
+import Button from '../button/button.component';
+
 import './homepage.styles.css';
 
 const Homepage = () => {
+    const [isPopupOpen, setIsPopupOpen] = useState(false);
+
     return (
       <div className="homepage-container">
         <div className="homepage-content-container">
+          {isPopupOpen && (
+            <div></div>
+          )}
           <div className="title">A better way to enjoy every day.</div>
           <div className="subtitle">Be the first to know when we launch.</div>
-          <button type="button">Request an invite</button>
+          <Button type="button" onClick={() => setIsPopupOpen(true)}>Request an invite</Button>
         </div>
       </div>
     );

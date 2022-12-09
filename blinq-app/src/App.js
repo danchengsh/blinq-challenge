@@ -9,8 +9,7 @@ const App = () => {
     <Fragment>
       <HeaderBar />
       <Routes>
-        <Route path='/' element={<Homepage />}>
-        </Route>
+        <Route path='/' element={<Homepage />} />
       </Routes>
       <FooterBar />
     </Fragment>
