@@ -19,3 +19,23 @@
 .subtitle {
     font-size: 20px;
 }
+
+/* .modal-content {
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    margin-right: -50%;
+    width: 400px;
+    height: 400px;
+    transform: translate(-50%, -50%);
+} */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(192,192,192, 0.5);
+}
